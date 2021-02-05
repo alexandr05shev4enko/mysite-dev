@@ -1,17 +1,248 @@
 <!DOCTYPE html>
-<html lang="кг">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Портфолио</title>
+  <!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
+
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-top">
+        <img class="header-top__logo" src="images/logo.svg" alt="Логотип">
+        <p class="header-top__title">
+          Портфолио веб-разработчика
+        </p>
+        <div class="header-top__btn">
+          <div class="header-top__btn-inner"></div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <p class="header-bottom__title">
+          Шевченко Александр
+        </p>
+        <p class="header-bottom__subtitle">
+          WEB-разработчик / HTML-верстальщик
+        </p>
+      </div>
+      <div class="menu">
+        <div class="menu__item">
+          <a class="menu__item-link" href="#header">
+            Главная
+          </a>
+        </div>
+        <div class="menu__item">
+          <a class="menu__item-link" href="#about">
+            Обо мне
+          </a>
+        </div>
+        <div class="menu__item">
+          <a class="menu__item-link" href="#projects">
+            Проэкты
+          </a>
+        </div>
+        <div class="menu__item">
+          <a class="menu__item-link" href="#contact">
+            Контакты
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
   
+
+  <section class="about" id="about">
+    <div class="container">
+      <h3 class="about__title title">
+        Обо мне
+      </h3>
+      <div class="about__items">
+        <div class="about__item">
+          <p class="about__item-title">
+            Немного о себе
+          </p>
+          <p class="about__item-text">
+            Добро пожаловать на мою страницу!
+            Меня зовут Шевченко Александр. Занимаюсь веб-разработкой. Выполняю верстку сайтов, лендингов,
+            корпоративных сайтов, интернет-магазинов. Верстаю адаптивную верстку под любой размер экрана и любое
+            устроство.
+          </p>
+        </div>
+        <div class="about__item">
+          <p class="about__item-title">
+            Знания и умения
+          </p>
+          <ul class="about__item-list">
+            <li class="about__list-item">
+              HTML5/CSS3.
+            </li>
+            <li class="about__list-item">
+              SASS/SCSS
+            </li>
+            <li class="about__list-item">
+              GULP
+            </li>
+            <li class="about__list-item">
+              FLEX/GRID
+            </li>
+            <li class="about__list-item">
+              Адаптивная верстка
+            </li>
+            <li class="about__list-item">
+              Git
+            </li>
+            <li class="about__list-item">
+              jQuery
+            </li>
+          </ul>
+        </div>
+        <div class="about__item">
+          <p class="about__item-title">
+            Образование
+          </p>
+          <p class="about__item-text">
+            Высшее образование, магистр.
+            Курс вёрстки, самообразование.
+          </p>
+        </div>
+      </div>
+      <h3 class="skills__title title">
+        Проффесиональные навыки
+      </h3>
+      <div class="skills__items">
+        <div class="skills__item">
+          <p class="skills__item-name">
+            HTMl5/CSS3
+          </p>
+          <div class="skills__item-progress visible1"></div>
+        </div>
+        <div class="skills__item">
+          <p class="skills__item-name">
+            jQuery
+          </p>
+          <div class="skills__item-progress visible2"></div>
+        </div>
+        <div class="skills__item">
+          <p class="skills__item-name">
+            Адаптивная вёрстка
+          </p>
+          <div class="skills__item-progress visible3"></div>
+        </div>
+        <div class="skills__item">
+          <p class="skills__item-name">
+            Photoshop/Figma
+          </p>
+          <div class="skills__item-progress visible4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="container">
+      <h3 class="projects__title title">
+        Проэкты
+      </h3>
+     
+        <div class="projects__slider swiper-container">
+          <div class="projects__slider-items swiper-wrapper">
+            <div class="projects__slider-item swiper-slide">
+              <img class="projects__slider-img" src="images/sites/aromance.png" alt="Скриншот сайта">
+              <div class="projects__slider-btn">
+                <a class="projects__slider-link" href="https://alexandr05shev4enko.github.io/aromance/" target="blanc">Смотреть</a>
+              </div>
+            </div>
+            <div class="projects__slider-item swiper-slide">
+              <img class="projects__slider-img" src="images/sites/luchcoffee.png" alt="Скриншот сайта">
+              <div class="projects__slider-btn">
+                <a class="projects__slider-link" href="https://alexandr05shev4enko.github.io/luchcoffee/" target="blanc">Смотреть</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev">
+            <img src="images/arrow-left.svg" alt="">
+          </div>
+          <div class="swiper-button-next">
+            <img src="images/arrow-right.svg" alt="">
+          </div>
+        </div>
+     
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h3 class="contact__title title">
+        Контакты
+      </h3>
+      <p class="contact__text">
+        Связаться со мной вы можете через любой удобный для Вас способ.
+      </p>
+      <div class="contact__items">
+        <div class="contact__items-left">
+          <div class="contact__item">
+            <a class="contact__item-link" href="https://www.instagram.com/_a_l_e_x_a_n_d_r_0_5_/" target="blanc">
+              Instagram
+            </a>
+          </div>
+          <div class="contact__item">
+            <a class="contact__item-link" href="https://www.facebook.com/profile.php?id=100003791193104" target="blanc">
+              Facebook
+            </a>
+          </div>
+          <div class="contact__item">
+            <a class="contact__item-link" href="https://t.me/gotkek" target="blanc">
+              Telegram
+            </a>
+          </div>
+        </div>
+        <div class="contact__items-right">
+          <div class="contact__item">
+            <a class="contact__item-link" href="https://www.linkedin.com/in/александр-шевченко-a0064b202/"
+              target="blanc">
+              LinkedIn
+            </a>
+          </div>
+          <div class="contact__item">
+            <a class="contact__item-link" href="#" target="blanc">
+              Vkontakte
+            </a>
+          </div>
+          <div class="contact__item">
+            <a class="contact__item-link" href="Skype:alex05071998?chat" target="blanc">
+              Skype
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="contact__email">
+        <a class="contact__email-link" href="mailTo:alex050798@gmail.com">alex050798@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__text">
+          2021, Шевченко Александр
+        </p>
+        <img class="footer__logo" src="images/logo.svg" alt="Логотип">
+      </div>
+    </div>
+  </footer>
 
 
 
 
   <script src="js/main.min.js"></script>
 </body>
+
 </html>

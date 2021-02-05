@@ -33,6 +33,8 @@ function styles(){
 function scripts(){
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/progressbar.js/dist/progressbar.js',
+    'node_modules/swiper/swiper-bundle.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
@@ -61,6 +63,7 @@ function build(){
   return src([
     'app/**/*.html',
     'app/css/style.min.css',
+    'app/css/swiper.min.css',
     'app/js/main.min.js'
   ], {base: 'app'})
   .pipe(dest('dist'))

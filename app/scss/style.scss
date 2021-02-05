@@ -4,7 +4,329 @@
 @import 'global';
 
 
+.header{
+  height: 100vh;
+}
+.header-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 63px 0;
+  &__title{
+    @extend %bellota-400;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  &__btn{
+    width: 70px;
+    height: 70px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    z-index: 10;
+    cursor: pointer;
+  }
+  &__btn-inner{
+    width: 40px;
+    height: 1px;
+    background-color: #000;
+    position: relative;
+    &::after,
+    &::before{
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 1px;
+      background-color: #000;
+    }
+    &::before{
+      top: -15px;
+    }
+    &::after{
+      top: 15px;
+    }
+  }
+}
+.header-bottom{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 87px 0 170px 0;
+  height: calc(100vh - 200px);
+  &__title{
+    display: block;
+    font-size: 36px;
+    line-height: 45px;
+    // margin: 87px auto;
+  }
+  &__subtitle{
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
 
+.about{
+  padding: 100px 0;
+  background-color: rgba(196, 196, 196, 0.5);
+  &__title{
+    margin-bottom: 42px;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    width: 380px;
+    padding: 15px;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 64px;
+      height: 64px;
+    }
+    &:nth-child(1)::before{
+      background-image: url("../images/about.svg");
+    }
+    &:nth-child(2)::before{
+      background-image: url("../images/skills.svg");
+    }
+    &:nth-child(3)::before{
+      background-image: url("../images/education.svg");
+    }
+  }
+  &__item-title{
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__item-text{
+    max-width: 330px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &__item-list{
+    text-align: center;
+  }
+}
+.skills{
+  &__title{
+    margin-top: 100px;
+    margin-bottom: 60px;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1010px;
+    margin: 0 auto;
+  }
+  &__item-name{
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  &__item-progress{
+    width: 150px;
+    height: 150px;
+    // border-radius: 50%;
+    // background-color: #000;
+    margin: 0 auto;
+    & svg{
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.projects{
+  padding-top: 150px;
+  padding-bottom: 150px;
+  &__title{
+    margin-bottom: 140px;
+  }
+  &__slider-item{
+    position: relative;
+  }
+  &__slider-btn{
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__slider-link{
+    font-size: 24px;
+    line-height: 55px;
+    text-align: center;
+    color: #fff;
+    margin: auto;
+    width: 200px;
+    height: 60px; 
+    background-color: #000;
+    border-radius: 5px;
+  }
+  &__slider-img{
+    width: 940px;
+    margin: 0 auto;
+  }
+}
+.swiper-wrapper{
+  width: 940px;
+  height: 415px;
+}
+.swiper-button-prev{
+  
+  &::after{
+    display: none;
+  }
+}
+.swiper-button-next{
+  
+  &::after{
+    display: none;
+  }
+}
+
+
+.contact{
+  padding: 100px 0 150px;
+  background-color: rgba(196, 196, 196, 0.5);
+  &__title{
+    margin-bottom: 100px;
+  }
+  &__text{
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    max-width: 430px;
+    margin: 0 auto 130px;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  &__item{
+    padding-left: 90px;
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before{
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 50px;
+      left: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+  &__items-left{
+    & .contact__item{
+      &:nth-child(1)::before{
+        background-image: url("../images/instagram.svg");
+      }
+      &:nth-child(2)::before{
+        background-image: url("../images/facebook.svg");
+      }
+      &:nth-child(3)::before{
+        background-image: url("../images/teelgram.svg");
+      }
+    }
+  }
+  &__items-right{
+    & .contact__item{
+      &:nth-child(1)::before{
+        background-image: url("../images/linkedin.svg");
+      }
+      &:nth-child(2)::before{
+        background-image: url("../images/vk.svg");
+      }
+      &:nth-child(3)::before{
+        background-image: url("../images/skype.svg");
+      }
+    }
+  }
+  &__item-link,
+  .contact__email-link{
+    font-size: 24px;
+    line-height: 30px;
+    color: #000;
+    transition: all .3s;
+    &:hover{
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+  &__email{
+    padding-top: 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before{
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 50px;
+      background-image: url("../images/email.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      top: 0;
+    }
+  }
+}
+
+.footer{
+  padding: 10px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu{
+  transform: translateX(300%);
+  transition: all .7s;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 130px 0 180px;
+  &--active{
+    transform: translateX(0)
+  }
+  &__item-link{
+    font-size: 36px;
+    line-height: 45px;
+    color: #fff;
+  }
+}
 
 
 
