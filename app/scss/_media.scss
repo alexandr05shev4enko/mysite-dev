@@ -78,6 +78,9 @@
   }
 }
 @media (max-width: 340px){
+  .header-top{
+    padding-bottom: 0;
+  }
   .about{
     &__item{
       width: 300px;
